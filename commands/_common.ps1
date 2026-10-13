@@ -90,6 +90,10 @@ function Push-RunFolder([string]$RelativeFolder, [string]$Message) {
     Ensure-GitHubAuth
     Push-Location $script:RepoRoot
     try {
+        $n = (& git config --get user.name 2>$null)
+        $e = (& git config --get user.email 2>$null)
+        if (-not $n) { & git config user.name "DLTB Remote Collector" }
+        if (-not $e) { & git config user.email "dltb-collector@local.invalid" }
         & git pull --rebase --autostash origin main
         if ($LASTEXITCODE -ne 0) { throw "git pull failed." }
 

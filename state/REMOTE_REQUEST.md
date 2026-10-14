@@ -1,27 +1,24 @@
 # REMOTE REQUEST
 
-Current remote task: INPUT_ACTION_DISCOVERY_1B
-
-Collector:
-- Run the SAME 1_COLLECTOR.cmd again.
-- Game can remain open. No restart.
-- Scan only scripts/inputs/* across data0-data7 for developer/no-clip/freecam/camera/teleport/debug/TPP action strings.
-- Also do a tiny targeted ASCII string probe of the exact gamedll for noclip/freecam/developer/collision/ghost terms.
-- Upload only small text reports.
-- Do not upload full scripts, saves, DLLs, or memory dumps.
-
-Manual zero-risk test:
-- While in-game, press NumPad * once.
-- Report whether a developer menu appears, nothing happens, or another UI opens.
+Current remote task: TEST_POC_01_DEV_MENU_F10
 
 Apply:
-- No POC yet. Wait for this collector result unless the native developer menu directly exposes noclip.
-
-Monitor:
-- Do not run yet.
+- Close DLTB.
+- Run 3_APPLY.cmd.
+- Start DLTB.
+- Press F10 once.
+- Report whether the developer menu opens, nothing happens, or another UI/action happens.
 
 Clean:
-- No candidate installed.
+- If APPLY errors or result is bad, close DLTB and run 2_CLEAN.cmd.
+- CLEAN restores exact pre-POC data7.pak.
 
-MASTER STATE RULE:
-Update MASTER_STATE.md before creating POC 1.
+Collector:
+- Do not run now.
+
+Monitor:
+- Do not run now.
+
+POC purpose:
+- This does not enable noclip yet.
+- It only proves access to the native developer path from the user's 75% keyboard.

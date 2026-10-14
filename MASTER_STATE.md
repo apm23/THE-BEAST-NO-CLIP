@@ -177,3 +177,13 @@ Next smallest step:
 1. User can manually press NumPad `*` once in-game to see whether the native developer menu opens. This requires no restart and changes nothing.
 2. In parallel, expand the collector only across script-like entries for exact developer/no-clip/free-camera action strings and references to `_ACTION_DEVELOPER_MENU`.
 3. If scripts still contain no direct action name, scan only ASCII/UTF-16 strings from the exact gamedll build for noclip/freecam/developer command names before any hook work.
+
+
+## POC_01_DEV_MENU_F10
+
+- User keyboard: 75%, no numpad.
+- Native developer menu bind: EKey__MULTIPLY.
+- User selected F10.
+- Current candidate in mod/current changes only _ACTION_DEVELOPER_MENU to EKey__F10.
+- Apply requires DLTB closed; then restart game and press F10 once.
+- 2_CLEAN.cmd restores the exact pre-POC data7.pak.

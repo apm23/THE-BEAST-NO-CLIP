@@ -194,6 +194,150 @@ if ($effectiveEnum) {
 
 $scan.ToString() | Set-Content -Encoding UTF8 (Join-Path $out "INPUT_DEV_HOTKEY_SCAN.md")
 
+
+# ---------------------------------------------------------------------------
+# Phase 1B targeted search: input scripts + tiny gamedll string probes.
+# ---------------------------------------------------------------------------
+
+function Search-InputScriptsAcrossPaks {
+    param([string[]]$Terms)
+
+    $sb = New-Object System.Text.StringBuilder
+    [void]$sb.AppendLine("# Input Script Cross-Pak Scan — $stamp")
+    [void]$sb.AppendLine("")
+
+    foreach ($n in 0..7) {
+        $pak = Join-Path $source ("data{0}.pak" -f $n)
+        if (-not (Test-Path $pak)) { continue }
+
+        $zip = [System.IO.Compression.ZipFile]::OpenRead($pak)
+        try {
+            foreach ($e in $zip.Entries) {
+                $pathNorm = ($e.FullName -replace '\\','/').ToLowerInvariant()
+                if (-not $pathNorm.StartsWith("scripts/inputs/")) { continue }
+                if (-not ($pathNorm.EndsWith(".scr") -or $pathNorm.EndsWith(".def") -or $pathNorm.EndsWith(".txt"))) { continue }
+
+                $s = $e.Open()
+                try {
+                    $r = New-Object System.IO.StreamReader($s, [System.Text.Encoding]::UTF8, $true)
+                    try { $txt = $r.ReadToEnd() } finally { $r.Dispose() }
+                } finally { $s.Dispose() }
+
+                $lines = $txt -split "\r?\n"
+                $hitIdx = New-Object System.Collections.Generic.List[int]
+                for ($i=0; $i -lt $lines.Count; $i++) {
+                    foreach ($term in $Terms) {
+                        if ($lines[$i] -match $term) {
+                            $hitIdx.Add($i)
+                            break
+                        }
+                    }
+                }
+
+                if ($hitIdx.Count -eq 0) { continue }
+
+                [void]$sb.AppendLine("## data$n.pak :: $($e.FullName)")
+                [void]$sb.AppendLine("- matches: $($hitIdx.Count)")
+                [void]$sb.AppendLine("")
+
+                $seen = @{}
+                $emitted = 0
+                foreach ($i in $hitIdx) {
+                    foreach ($j in ([Math]::Max(0,$i-2))..([Math]::Min($lines.Count-1,$i+2))) {
+                        if ($seen.ContainsKey($j)) { continue }
+                        $seen[$j] = $true
+                        [void]$sb.AppendLine(("{0,5}: {1}" -f ($j+1), $lines[$j]))
+                        $emitted++
+                        if ($emitted -ge 180) { break }
+                    }
+                    if ($emitted -ge 180) {
+                        [void]$sb.AppendLine("... capped ...")
+                        break
+                    }
+                }
+                [void]$sb.AppendLine("")
+            }
+        } finally {
+            $zip.Dispose()
+        }
+    }
+    return $sb.ToString()
+}
+
+$inputTerms = @(
+    '(?i)noclip',
+    '(?i)no[_ -]?clip',
+    '(?i)free.?cam',
+    '(?i)free.?camera',
+    '(?i)_ACTION_DEVELOPER_MENU',
+    '(?i)_ACTION_.*CAM',
+    '(?i)_ACTION_.*TELEPORT',
+    '(?i)_ACTION_.*TPP',
+    '(?i)_ACTION_.*DEBUG',
+    '(?i)EKey__Y\b',
+    '(?i)EKey__PAUSE\b',
+    '(?i)EKey__SCROLL\b',
+    '(?i)EKey__F1\b',
+    '(?i)EKey__PGUP\b',
+    '(?i)EKey__PGDOWN\b'
+)
+
+(Search-InputScriptsAcrossPaks -Terms $inputTerms) |
+    Set-Content -Encoding UTF8 (Join-Path $out "INPUT_FOLDER_CROSS_PAK_SCAN.md")
+
+function Find-AsciiNeedle {
+    param(
+        [byte[]]$Bytes,
+        [string]$Needle,
+        [int]$Context = 96,
+        [int]$MaxHits = 12
+    )
+
+    $needleBytes = [System.Text.Encoding]::ASCII.GetBytes($Needle.ToLowerInvariant())
+    $hits = New-Object System.Collections.Generic.List[object]
+
+    for ($i=0; $i -le $Bytes.Length-$needleBytes.Length; $i++) {
+        $ok = $true
+        for ($j=0; $j -lt $needleBytes.Length; $j++) {
+            $b = $Bytes[$i+$j]
+            if ($b -ge 65 -and $b -le 90) { $b += 32 }
+            if ($b -ne $needleBytes[$j]) { $ok=$false; break }
+        }
+        if (-not $ok) { continue }
+
+        $a=[Math]::Max(0,$i-$Context)
+        $z=[Math]::Min($Bytes.Length-1,$i+$needleBytes.Length+$Context)
+        $slice=$Bytes[$a..$z]
+        $txt=[System.Text.Encoding]::ASCII.GetString($slice)
+        $txt=[regex]::Replace($txt,'[^\x20-\x7E]+',' ')
+        $hits.Add([pscustomobject]@{Offset=$i;Text=$txt.Trim()})
+        if ($hits.Count -ge $MaxHits) { break }
+        $i += $needleBytes.Length-1
+    }
+    return $hits
+}
+
+$dllProbe = New-Object System.Text.StringBuilder
+[void]$dllProbe.AppendLine("# gamedll Targeted ASCII Probe — $stamp")
+[void]$dllProbe.AppendLine("")
+
+if (Test-Path $dll) {
+    $bytes=[System.IO.File]::ReadAllBytes($dll)
+    foreach ($needle in @("noclip","no clip","freecam","free camera","developer menu","developer_menu","third person","tpp","teleport","collision","ghost")) {
+        $hits=Find-AsciiNeedle -Bytes $bytes -Needle $needle
+        [void]$dllProbe.AppendLine("## $needle")
+        [void]$dllProbe.AppendLine("- hits: $($hits.Count)")
+        foreach ($h in $hits) {
+            [void]$dllProbe.AppendLine(("0x{0:X}: {1}" -f $h.Offset,$h.Text))
+        }
+        [void]$dllProbe.AppendLine("")
+    }
+} else {
+    [void]$dllProbe.AppendLine("DLL NOT FOUND")
+}
+
+$dllProbe.ToString() | Set-Content -Encoding UTF8 (Join-Path $out "GAMEDLL_DEV_STRING_PROBE.md")
+
 $master = Join-Path $script:RepoRoot "MASTER_STATE.md"
 if (Test-Path $master) {
     Copy-Item $master (Join-Path $out "MASTER_STATE_AT_RUN.md")

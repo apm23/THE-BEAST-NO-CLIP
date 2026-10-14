@@ -146,3 +146,34 @@ Search targets:
 - commented AddAction lines around those hits
 
 No save dump. No full script upload. No memory scan yet.
+
+
+## Input hotkey collector PASS — 2026-10-14 11:23
+
+Run: `data/runs/20261014_112317/`
+
+Confirmed from the user's own game files:
+
+### inputs_keyboard.scr
+- Effective source is still `data0.pak`; GH1 currently does not override this file.
+- Native line 102 is ACTIVE, not commented:
+  - `AddAction(_ACTION_DEVELOPER_MENU, EInputTarget_Module, EInputDevice_Keyboard, false, EKey__MULTIPLY, false, false);`
+- Therefore NumPad `*` is a native developer-menu action candidate in this exact build.
+
+### inputenums.def
+Native key enums confirmed:
+- `EKey__Y = 0x15`
+- `EKey__F1 = 0x3B`
+- `EKey__SCROLL = 0x46`
+- `EKey__PAUSE = 0xC5`
+
+The targeted input-file scan did NOT expose a literal noclip/freecam action name. So do not invent an action identifier yet.
+
+## Decision
+
+Do not build POC 1 yet.
+
+Next smallest step:
+1. User can manually press NumPad `*` once in-game to see whether the native developer menu opens. This requires no restart and changes nothing.
+2. In parallel, expand the collector only across script-like entries for exact developer/no-clip/free-camera action strings and references to `_ACTION_DEVELOPER_MENU`.
+3. If scripts still contain no direct action name, scan only ASCII/UTF-16 strings from the exact gamedll build for noclip/freecam/developer command names before any hook work.

@@ -32,6 +32,37 @@ function Ensure-GitHubAuth {
 }
 
 function Find-DLTB {
+    # Prefer the installation that is ACTUALLY RUNNING.
+    # This safely handles PCs that still have a second/backup DLTB install.
+    $running = Get-Process -Name $script:ProcessName -ErrorAction SilentlyContinue | Select-Object -First 1
+    if ($running) {
+        $exePath = $null
+
+        try { $exePath = $running.Path } catch {}
+        if (-not $exePath) {
+            try { $exePath = $running.MainModule.FileName } catch {}
+        }
+        if (-not $exePath) {
+            try {
+                $cim = Get-CimInstance Win32_Process -Filter "ProcessId=$($running.Id)" -ErrorAction Stop
+                $exePath = $cim.ExecutablePath
+            } catch {}
+        }
+
+        if ($exePath) {
+            $dir = Split-Path -Parent $exePath
+            for ($i = 0; $i -lt 8 -and $dir; $i++) {
+                if (Test-Path (Join-Path $dir "ph_ft\source\data0.pak")) {
+                    Write-Host "[AUTO] Using RUNNING DLTB install:" (Sanitize-Text $dir)
+                    return $dir
+                }
+                $parent = Split-Path -Parent $dir
+                if ($parent -eq $dir) { break }
+                $dir = $parent
+            }
+        }
+    }
+
     $roots = New-Object System.Collections.Generic.List[string]
 
     foreach ($pair in @(
@@ -72,11 +103,23 @@ function Find-DLTB {
         if (Test-Path (Join-Path $g "ph_ft\source\data0.pak")) { $games += $g }
     }
 
-    $games = $games | Select-Object -Unique
-    if ($games.Count -ne 1) {
-        throw "Expected exactly one DLTB installation, found $($games.Count)."
+    $games = @($games | Select-Object -Unique)
+
+    if ($games.Count -eq 1) {
+        return $games[0]
     }
-    return $games[0]
+
+    if ($games.Count -gt 1) {
+        Write-Host ""
+        Write-Host "[STOP] Multiple DLTB installs found:"
+        foreach ($g in $games) {
+            Write-Host "  -" (Sanitize-Text $g)
+        }
+        Write-Host ""
+        throw "Found $($games.Count) DLTB installs and could not identify the active one. Start the DLTB copy you want to research, then run this command again."
+    }
+
+    throw "DLTB installation not found."
 }
 
 function Sanitize-Text([string]$Text) {

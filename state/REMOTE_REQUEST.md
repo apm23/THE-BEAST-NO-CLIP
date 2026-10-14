@@ -1,28 +1,27 @@
 # REMOTE REQUEST
 
-Current remote task: INPUT_DEV_HOTKEY_SCAN
+Current remote task: INPUT_ACTION_DISCOVERY_1B
 
 Collector:
-- Run the SAME 1_COLLECTOR.cmd.
-- Game may stay open; no restart required.
-- Upload a small line-numbered scan of the user's own native/effective input scripts.
-- Search inputs_keyboard.scr and inputenums.def for native developer/no-clip/freecam/camera/TPP/teleport/debug/collision actions and relevant keys.
-- Do not upload the full script.
-- Do not upload saves or memory dumps.
+- Run the SAME 1_COLLECTOR.cmd again.
+- Game can remain open. No restart.
+- Scan only scripts/inputs/* across data0-data7 for developer/no-clip/freecam/camera/teleport/debug/TPP action strings.
+- Also do a tiny targeted ASCII string probe of the exact gamedll for noclip/freecam/developer/collision/ghost terms.
+- Upload only small text reports.
+- Do not upload full scripts, saves, DLLs, or memory dumps.
 
-Research direction:
-- Public evidence says the game already has dormant developer hotkeys, including Y = Noclip.
-- Independently reconstruct the minimum native script change from the user's own game files.
-- Do not copy or redistribute third-party mod assets.
+Manual zero-risk test:
+- While in-game, press NumPad * once.
+- Report whether a developer menu appears, nothing happens, or another UI opens.
+
+Apply:
+- No POC yet. Wait for this collector result unless the native developer menu directly exposes noclip.
 
 Monitor:
 - Do not run yet.
 
-Apply:
-- No candidate yet. Wait for this targeted collector result.
-
 Clean:
-- No candidate installed yet.
+- No candidate installed.
 
 MASTER STATE RULE:
-Read and update MASTER_STATE.md after this collector result before creating POC 1.
+Update MASTER_STATE.md before creating POC 1.

@@ -76,3 +76,73 @@ Fix applied:
 - User does not need a new bootstrap ZIP; rerunning the same CMD pulls this fix automatically.
 
 Next action remains: run 1_COLLECTOR.cmd with the intended DLTB copy open.
+
+
+## Baseline collector PASS — 2026-10-14 11:19
+
+Run: `data/runs/20261014_111919/`
+
+Confirmed active install:
+- `C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast`
+- Process running: yes
+- PID at collection: 39872
+- Working set: ~4.81 GB
+
+Confirmed game build:
+- `DyingLightGame_TheBeast_x64_rwdi.exe`
+  - size 1,493,568
+  - SHA256 `B74298062BB000253FD3D6F25C8A8319F147E13FD7B7B7A51D9205CF51D123E5`
+- `gamedll_ph_x64_rwdi.dll`
+  - size 61,847,104
+  - SHA256 `DDB68C8F87BA2AFD0E561B2D1ADB9235467C29069FB1CD1619DB81E1056378EB`
+
+Important: this is the SAME gamedll hash already proven in the Night Sovereign work. Known RVAs from that project therefore belong to this exact build, although no no-clip RVA is assumed yet.
+
+Active gameplay DLL base during this run:
+- `gamedll_ph_x64_rwdi.dll = 0x7FFC4A050000`
+
+Loaded mod layer reached `data7.pak`. Current `data7.pak` SHA256:
+- `625CE44FC2B396238CC78A02C08AA75608E933E6F9FAFFAF74349A4B44C2F69D`
+
+Runtime contamination note:
+- `TrSpeedHack_x64.dll` from FLiNGTrainer was loaded during this baseline.
+- This does NOT matter for the next disk/script inspection, but later memory-behavior comparisons should be done without unrelated trainer hooks if exact behavior matters.
+
+## Strong no-clip lead
+
+Public research shows DLTB already contains developer shortcut behavior. A current Nexus mod named "Restore Developer Shortcuts" reports a native toggle:
+- Y = Noclip
+- Pause/Break = Free Camera
+- Scroll Lock = TPP
+- F1 = camera-position teleport
+- PgUp/PgDown = vertical free-camera movement
+
+Separate public keybind documentation confirms DLTB keyboard actions are configured in:
+- `scripts/inputs/inputs_keyboard.scr`
+
+Do NOT copy/redistribute the Nexus author's asset. We will independently inspect the user's native/effective `inputs_keyboard.scr` and reconstruct the minimum change from the game's own script.
+
+## Current phase
+
+Phase 1 — native developer-shortcut discovery.
+
+### Next action
+
+Run the same `1_COLLECTOR.cmd` again after the remote collector update.
+
+The next collector must upload ONLY small line-numbered snippets from:
+- vanilla data0 `scripts/inputs/inputs_keyboard.scr`
+- effective highest-priority `inputs_keyboard.scr`
+- matching `scripts/inputs/inputenums.def` if present
+
+Search targets:
+- noclip / clip
+- EKey__Y
+- free camera / camera
+- TPP / third person
+- teleport
+- debug / developer / ghost / collision
+- Pause / Scroll Lock / F1 / PgUp / PgDown
+- commented AddAction lines around those hits
+
+No save dump. No full script upload. No memory scan yet.

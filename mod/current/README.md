@@ -1,11 +1,18 @@
-# current candidate
+# POC_01_DEV_MENU_F10
 
-Only the no-clip candidate that should be tested now belongs here.
+Purpose: prove the game's already-active native developer-menu action can be reached from the user's 75% keyboard.
 
-Expected files when a candidate exists:
-- CANDIDATE.json
-- APPLY.ps1
-- CLEAN.ps1
-- candidate payload/scripts
+APPLY:
+- reads the currently effective scripts/inputs/inputs_keyboard.scr from data0-data7;
+- changes only _ACTION_DEVELOPER_MENU from EKey__MULTIPLY (NumPad *) to EKey__F10;
+- writes only that override into data7.pak while preserving every other existing data7 entry;
+- saves an exact pre-POC data7 backup locally for 2_CLEAN.cmd.
 
-When a candidate fails, move the useful candidate into ../trash/<candidate-id>/ before replacing it.
+Test:
+1. Close DLTB.
+2. Run 3_APPLY.cmd.
+3. Start DLTB normally.
+4. Press F10 once.
+5. Report: developer menu / nothing / other UI.
+
+This does not enable noclip yet. It proves access to the native developer path.

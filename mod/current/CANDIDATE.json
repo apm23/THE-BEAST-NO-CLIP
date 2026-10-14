@@ -1,6 +1,10 @@
 {
-  "id": null,
-  "status": "none",
-  "goal": "No no-clip POC selected yet. Run collector first.",
+  "id": "POC_01_DEV_MENU_F10",
+  "status": "ready",
+  "goal": "Rebind the native _ACTION_DEVELOPER_MENU from NumPad * to F10 using the user's effective inputs_keyboard.scr.",
+  "type": "pure-script data7 override",
+  "requires_game_closed_for_apply": true,
+  "test": "Start DLTB after APPLY, press F10 once, report whether the developer menu opens.",
+  "rollback": "2_CLEAN.cmd restores the exact pre-POC data7.pak.",
   "master_state": "../../MASTER_STATE.md"
 }

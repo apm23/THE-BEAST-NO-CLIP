@@ -103,7 +103,22 @@ function Find-DLTB {
         if (Test-Path (Join-Path $g "ph_ft\source\data0.pak")) { $games += $g }
     }
 
-    $games = @($games | Select-Object -Unique)
+    # Windows paths are case-insensitive. Steam can expose the SAME library
+    # once as e.g. c:\program files... and once as C:\Program Files....
+    # Deduplicate by canonical full path + lower-case key before counting installs.
+    $byPath = @{}
+    foreach ($g in $games) {
+        try {
+            $full = [System.IO.Path]::GetFullPath($g).TrimEnd('\')
+        } catch {
+            $full = $g.TrimEnd('\')
+        }
+        $key = $full.ToLowerInvariant()
+        if (-not $byPath.ContainsKey($key)) {
+            $byPath[$key] = $full
+        }
+    }
+    $games = @($byPath.Values)
 
     if ($games.Count -eq 1) {
         return $games[0]

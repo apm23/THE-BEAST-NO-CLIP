@@ -64,3 +64,15 @@ No movement/physics hook has been selected yet.
 - 2026-10-14: Repository initialized.
 - 2026-10-14: Remote-first four-command workflow requested.
 - 2026-10-14: MASTER STATE plus structured data/monitor/mod/trash layout defined.
+
+
+## Workflow fix — 2026-10-14
+
+First collector bootstrap found **2 DLTB installations** on the user's PC, so the old strict resolver stopped before collection.
+
+Fix applied:
+- commands/_common.ps1 now prefers the DLTB installation belonging to the **currently running** DyingLightGame_TheBeast_x64_rwdi.exe process.
+- If the game is not running and multiple installs remain ambiguous, the command stops safely and prints the candidates instead of guessing.
+- User does not need a new bootstrap ZIP; rerunning the same CMD pulls this fix automatically.
+
+Next action remains: run 1_COLLECTOR.cmd with the intended DLTB copy open.

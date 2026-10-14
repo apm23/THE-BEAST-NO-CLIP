@@ -1,0 +1,223 @@
+﻿# No-Clip Collector Run 20261014_112317
+
+- Game: C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast
+- Process running: True
+- PID: 39872
+- Working set: 4714102784
+
+## DyingLightGame_TheBeast_x64_rwdi.exe
+- Size: 1493568
+- LastWriteTimeUtc: 2026-09-26T02:01:44.8863401Z
+- SHA256: B74298062BB000253FD3D6F25C8A8319F147E13FD7B7B7A51D9205CF51D123E5
+
+## gamedll_ph_x64_rwdi.dll
+- Size: 61847104
+- LastWriteTimeUtc: 2026-09-26T02:01:44.8318324Z
+- SHA256: DDB68C8F87BA2AFD0E561B2D1ADB9235467C29069FB1CD1619DB81E1056378EB
+
+## Loaded data*.pak files
+- data0.pak | 108034290 bytes | C7C3A37E87C8A53F0DA0F9846E2B25E2A3F3BD5CCCC50F0024D963D57EDDB64A
+- data1.pak | 201264780 bytes | 32693EA5A029CA2FB72E1AA1C2DEF2EE16606E459823F271F32863CC1EBC4C2C
+- data2.pak | 75554 bytes | 534D30B8EC22A51CD5BF24DC5118A010C0B6752B1B2386FFDAD3B72CFE3DBE00
+- data3.pak | 227082 bytes | 39DA0F1BBBF6EA6B785BA1313629B853161514D428FFE786ED8FB81D51EC548E
+- data3.pakoff | 227070 bytes | 017384B01541D4980DFC81BD1E6A36E5CB0B0D576837547C5A307A1F70A9E267
+- data4.pak | 301848 bytes | DA6EA95EC07417AE9B4725C80F4BEE6A7CE0444624FD74B08C9D70C64FD48092
+- data5.pak | 619189 bytes | 62323B1564C9AC86281358324944DBB792E8497BE0CE01FFDCF823FCCA996F7E
+- data6.pak | 94283 bytes | 145848E464C8CA33E0838BB2DF00C39711719A5ECB2E12065E3D0972A886016A
+- data7.pak | 28261513 bytes | 625CE44FC2B396238CC78A02C08AA75608E933E6F9FAFFAF74349A4B44C2F69D
+
+## Process modules
+- _nvngx.dll | base=0x7FFC60AC0000 | size=1519616 | C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_da865124972e1f80\_nvngx.dll
+- ADVAPI32.dll | base=0x7FFDD5020000 | size=770048 | C:\WINDOWS\System32\ADVAPI32.dll
+- amd_fidelityfx_loader_dx12.dll | base=0x7FFDB8400000 | size=32768 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\amd_fidelityfx_loader_dx12.dll
+- amd_fidelityfx_upscaler_dx12.dll | base=0x7FFC56C30000 | size=13144064 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\amd_fidelityfx_upscaler_dx12.dll
+- amsi.dll | base=0x7FFDB2600000 | size=118784 | C:\WINDOWS\SYSTEM32\amsi.dll
+- AnimCommands_x64_rwdi.dll | base=0x7FFD5C7D0000 | size=143360 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\AnimCommands_x64_rwdi.dll
+- AnimDriver_x64_rwdi.dll | base=0x7FFC60C40000 | size=1298432 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\AnimDriver_x64_rwdi.dll
+- AUDIOSES.DLL | base=0x7FFDAFE10000 | size=1798144 | C:\WINDOWS\SYSTEM32\AUDIOSES.DLL
+- AuraSdk_x64.dll | base=0x7FFC84CA0000 | size=1179648 | C:\Program Files\ASUS\AuraSDK\AuraSdk_x64.dll
+- AVRT.dll | base=0x7FFDCCFD0000 | size=45056 | C:\WINDOWS\SYSTEM32\AVRT.dll
+- bcrypt.dll | base=0x7FFDD3CF0000 | size=172032 | C:\WINDOWS\SYSTEM32\bcrypt.dll
+- bcryptPrimitives.dll | base=0x7FFDD4580000 | size=704512 | C:\WINDOWS\System32\bcryptPrimitives.dll
+- bink2w64.dll | base=0x7FFC68CA0000 | size=507904 | c:\program files (x86)\steam\steamapps\common\dying light the beast\engine\source\bin\x64\bink2w64.dll
+- CFGMGR32.dll | base=0x7FFDD39D0000 | size=335872 | C:\WINDOWS\SYSTEM32\CFGMGR32.dll
+- clbcatq.dll | base=0x7FFDD5E30000 | size=712704 | C:\WINDOWS\System32\clbcatq.dll
+- combase.dll | base=0x7FFDD5F80000 | size=3690496 | C:\WINDOWS\System32\combase.dll
+- COMCTL32.dll | base=0x7FFDAB3D0000 | size=741376 | C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.26100.8328_none_87eede957a2ccddd\COMCTL32.dll
+- CoreMessaging.dll | base=0x7FFDD0850000 | size=1224704 | C:\WINDOWS\SYSTEM32\CoreMessaging.dll
+- CRYPT32.dll | base=0x7FFDD4640000 | size=1564672 | C:\WINDOWS\System32\CRYPT32.dll
+- CRYPTBASE.DLL | base=0x7FFDD3290000 | size=49152 | C:\WINDOWS\SYSTEM32\CRYPTBASE.DLL
+- cryptnet.dll | base=0x7FFDCB510000 | size=241664 | C:\WINDOWS\SYSTEM32\cryptnet.dll
+- CRYPTSP.dll | base=0x7FFDD3450000 | size=110592 | C:\WINDOWS\SYSTEM32\CRYPTSP.dll
+- d3d11.dll | base=0x7FFDCFF60000 | size=2490368 | C:\WINDOWS\SYSTEM32\d3d11.dll
+- d3d12.dll | base=0x7FFD8FED0000 | size=143360 | C:\WINDOWS\SYSTEM32\d3d12.dll
+- D3D12Core.dll | base=0x7FFC5E8C0000 | size=4878336 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\D3D12Core.dll
+- D3DCompiler_47.dll | base=0x7FFDCEFC0000 | size=4714496 | C:\WINDOWS\SYSTEM32\D3DCompiler_47.dll
+- d3dcompiler_47_64.dll | base=0x7FFC578C0000 | size=4771840 | C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_da865124972e1f80\NvCamera\d3dcompiler_47_64.dll
+- D3DSCache.dll | base=0x7FFCD6120000 | size=913408 | C:\WINDOWS\SYSTEM32\D3DSCache.dll
+- dbgcore.DLL | base=0x7FFD9C300000 | size=241664 | C:\WINDOWS\SYSTEM32\dbgcore.DLL
+- dbghelp.dll | base=0x7FFDC90D0000 | size=2408448 | C:\WINDOWS\SYSTEM32\dbghelp.dll
+- dcomp.dll | base=0x7FFDD01D0000 | size=2248704 | C:\WINDOWS\SYSTEM32\dcomp.dll
+- devobj.dll | base=0x7FFDD3990000 | size=192512 | C:\WINDOWS\SYSTEM32\devobj.dll
+- dhcpcsvc.DLL | base=0x7FFDCCF80000 | size=151552 | C:\WINDOWS\SYSTEM32\dhcpcsvc.DLL
+- dhcpcsvc6.DLL | base=0x7FFDCD1C0000 | size=118784 | C:\WINDOWS\SYSTEM32\dhcpcsvc6.DLL
+- DINPUT8.dll | base=0x7FFDA5E20000 | size=307200 | C:\WINDOWS\SYSTEM32\DINPUT8.dll
+- directxdatabasehelper.dll | base=0x7FFDCD390000 | size=385024 | C:\WINDOWS\SYSTEM32\directxdatabasehelper.dll
+- DiscordHook64.dll | base=0x7FFC440D0000 | size=4001792 | %USERPROFILE%\AppData\Local\Discord\app-1.0.9261\modules\discord_hook-1\discord_hook\e6f0a9804669bb\DiscordHook64.dll
+- DNSAPI.dll | base=0x7FFDD24D0000 | size=1409024 | C:\WINDOWS\SYSTEM32\DNSAPI.dll
+- DPAPI.DLL | base=0x7FFDD3A50000 | size=40960 | C:\WINDOWS\SYSTEM32\DPAPI.DLL
+- drvstore.dll | base=0x7FFDCB390000 | size=1548288 | C:\WINDOWS\SYSTEM32\drvstore.dll
+- DSOUND.dll | base=0x7FFD1B640000 | size=606208 | C:\WINDOWS\SYSTEM32\DSOUND.dll
+- DSPARSE.dll | base=0x7FFDD2E50000 | size=53248 | C:\WINDOWS\SYSTEM32\DSPARSE.dll
+- dwmapi.dll | base=0x7FFDD1170000 | size=192512 | C:\WINDOWS\SYSTEM32\dwmapi.dll
+- dxcore.dll | base=0x7FFDD0FA0000 | size=278528 | C:\WINDOWS\SYSTEM32\dxcore.dll
+- dxgi.dll | base=0x7FFDD1010000 | size=1290240 | C:\WINDOWS\SYSTEM32\dxgi.dll
+- DyingLightGame_TheBeast_x64_rwdi.exe | base=0x7FF710BE0000 | size=1503232 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\DyingLightGame_TheBeast_x64_rwdi.exe
+- engine_core_x64_rwdi.dll | base=0x7FFD3C020000 | size=2772992 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\engine_core_x64_rwdi.dll
+- engine_foundation_x64_rwdi.dll | base=0x7FFDCCAD0000 | size=32768 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\engine_foundation_x64_rwdi.dll
+- engine_x64_rwdi.dll | base=0x7FFC5BC00000 | size=43859968 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\engine_x64_rwdi.dll
+- EOSOVH-Win64-Shipping.dll | base=0x7FFCD6790000 | size=843776 | C:\Program Files (x86)\Epic Games\Epic Online Services\managedArtifacts\98bc04bc842e4906993fd6d6644ffb8d\EOSOVH-Win64-Shipping.dll
+- EOSSDK-Win64-Shipping.dll | base=0x7FFC5ED70000 | size=20140032 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\EOSSDK-Win64-Shipping.dll
+- fastprox.dll | base=0x7FFDB5680000 | size=1003520 | C:\WINDOWS\system32\wbem\fastprox.dll
+- fwpuclnt.dll | base=0x7FFDCB550000 | size=548864 | C:\WINDOWS\System32\fwpuclnt.dll
+- gamedll_ph_x64_rwdi.dll | base=0x7FFC4A050000 | size=66113536 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\gamedll_ph_x64_rwdi.dll
+- gameoverlayrenderer64.dll | base=0x7FFC60D80000 | size=1798144 | C:\Program Files (x86)\Steam\gameoverlayrenderer64.dll
+- GDI32.dll | base=0x7FFDD5E00000 | size=176128 | C:\WINDOWS\System32\GDI32.dll
+- gdi32full.dll | base=0x7FFDD4370000 | size=1216512 | C:\WINDOWS\System32\gdi32full.dll
+- GLU32.dll | base=0x7FFDA55A0000 | size=184320 | C:\WINDOWS\SYSTEM32\GLU32.dll
+- gpapi.dll | base=0x7FFDD30B0000 | size=151552 | C:\WINDOWS\SYSTEM32\gpapi.dll
+- HID.DLL | base=0x7FFDD2100000 | size=61440 | C:\WINDOWS\SYSTEM32\HID.DLL
+- imagehlp.dll | base=0x7FFDD58B0000 | size=131072 | C:\WINDOWS\System32\imagehlp.dll
+- imagelib_x64_rwdi.dll | base=0x7FFD3B8A0000 | size=1728512 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\imagelib_x64_rwdi.dll
+- IMM32.dll | base=0x7FFDD4AC0000 | size=200704 | C:\WINDOWS\System32\IMM32.dll
+- inputhost.dll | base=0x7FFDCACE0000 | size=1978368 | C:\WINDOWS\SYSTEM32\inputhost.dll
+- IPHLPAPI.DLL | base=0x7FFDD2440000 | size=208896 | C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+- kernel.appcore.dll | base=0x7FFDD2A90000 | size=110592 | C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+- KERNEL32.DLL | base=0x7FFDD50F0000 | size=831488 | C:\WINDOWS\System32\KERNEL32.DLL
+- KERNELBASE.dll | base=0x7FFDD3E00000 | size=4202496 | C:\WINDOWS\System32\KERNELBASE.dll
+- libcrypto-3-x64.dll | base=0x7FFC60F40000 | size=5267456 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\libcrypto-3-x64.dll
+- libpad.dll | base=0x180000000 | size=90112 | c:\program files (x86)\steam\steamapps\common\dying light the beast\engine\source\bin\x64\libpad.dll
+- libssl-3-x64.dll | base=0x7FFD3BF50000 | size=798720 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\libssl-3-x64.dll
+- libxell.dll | base=0x7FFD3B470000 | size=434176 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\libxell.dll
+- libxess.dll | base=0x7FFC3ED50000 | size=77836288 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\libxess.dll
+- libxess_fg.dll | base=0x7FFC57D60000 | size=22990848 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\libxess_fg.dll
+- memdump_x64_rwdi.dll | base=0x7FFDCABF0000 | size=69632 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\memdump_x64_rwdi.dll
+- meshlib_x64_rwdi.dll | base=0x7FFDA5FA0000 | size=163840 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\meshlib_x64_rwdi.dll
+- Microsoft.Internal.WarpPal.dll | base=0x7FFDCF450000 | size=106496 | C:\WINDOWS\SYSTEM32\Microsoft.Internal.WarpPal.dll
+- midimap.dll | base=0x7FFD96F70000 | size=49152 | C:\WINDOWS\SYSTEM32\midimap.dll
+- MMDevApi.dll | base=0x7FFDCC1D0000 | size=675840 | C:\WINDOWS\System32\MMDevApi.dll
+- MpOav.dll | base=0x7FFDB2530000 | size=671744 | C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.26080.4-0\MpOav.dll
+- MSACM32.dll | base=0x7FFD97520000 | size=135168 | C:\WINDOWS\SYSTEM32\MSACM32.dll
+- msacm32.drv | base=0x7FFD97880000 | size=61440 | C:\WINDOWS\SYSTEM32\msacm32.drv
+- MSASN1.dll | base=0x7FFDD34C0000 | size=77824 | C:\WINDOWS\SYSTEM32\MSASN1.dll
+- MSCTF.dll | base=0x7FFDD4CE0000 | size=1421312 | C:\WINDOWS\System32\MSCTF.dll
+- msdmo.dll | base=0x7FFD1B560000 | size=57344 | C:\WINDOWS\SYSTEM32\msdmo.dll
+- msvcp_win.dll | base=0x7FFDD44A0000 | size=667648 | C:\WINDOWS\System32\msvcp_win.dll
+- MSVCP140.dll | base=0x7FFDB59A0000 | size=643072 | C:\WINDOWS\SYSTEM32\MSVCP140.dll
+- msvcrt.dll | base=0x7FFDD5780000 | size=692224 | C:\WINDOWS\System32\msvcrt.dll
+- mswsock.dll | base=0x7FFDD3030000 | size=442368 | C:\WINDOWS\system32\mswsock.dll
+- napinsp.dll | base=0x7FFD9AB30000 | size=98304 | C:\WINDOWS\system32\napinsp.dll
+- ncrypt.dll | base=0x7FFDD35C0000 | size=196608 | C:\WINDOWS\SYSTEM32\ncrypt.dll
+- ncryptsslp.dll | base=0x7FFDAEE10000 | size=294912 | C:\WINDOWS\system32\ncryptsslp.dll
+- nlansp_c.dll | base=0x7FFD988D0000 | size=159744 | C:\WINDOWS\system32\nlansp_c.dll
+- NRD.dll | base=0x7FFC23290000 | size=52264960 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\NRD.dll
+- NSI.dll | base=0x7FFDD4E60000 | size=40960 | C:\WINDOWS\System32\NSI.dll
+- NTASN1.dll | base=0x7FFDD3570000 | size=258048 | C:\WINDOWS\SYSTEM32\NTASN1.dll
+- ntdll.dll | base=0x7FFDD6C00000 | size=2519040 | C:\WINDOWS\SYSTEM32\ntdll.dll
+- ntmarta.dll | base=0x7FFDD2BC0000 | size=221184 | C:\WINDOWS\system32\ntmarta.dll
+- nvapi64.dll | base=0x7FFDB9780000 | size=561152 | C:\WINDOWS\SYSTEM32\nvapi64.dll
+- nvapi64_impl.dll | base=0x7FFDB91E0000 | size=5840896 | C:\WINDOWS\system32\DriverStore\FileRepository\nv_dispi.inf_amd64_da865124972e1f80\nvapi64_impl.dll
+- NvCamera64.dll | base=0x7FFC5AC10000 | size=8974336 | C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_da865124972e1f80\NvCamera\NvCamera64.dll
+- nvcuda64.dll | base=0x7FFD62260000 | size=11837440 | C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_da865124972e1f80\nvcuda64.dll
+- nvdiagclt64.dll | base=0x7FFDA7360000 | size=868352 | C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_da865124972e1f80\nvdiagclt64.dll
+- nvdxgdmal64.dll | base=0x7FFDAE880000 | size=716800 | C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_da865124972e1f80\nvdxgdmal64.dll
+- nvgpucomp64.dll | base=0x7FFDC2330000 | size=110788608 | C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_da865124972e1f80\nvgpucomp64.dll
+- nvldumdx.dll | base=0x7FFDCB6C0000 | size=843776 | C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_da865124972e1f80\nvldumdx.dll
+- NvMemMapStoragex.dll | base=0x7FFDC0D80000 | size=1421312 | C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_da865124972e1f80\NvMemMapStoragex.dll
+- NvMessageBus.dll | base=0x7FFDB7B00000 | size=3555328 | C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_da865124972e1f80\Display.NvContainer\NvMessageBus.dll
+- nvngx_dlss.dll | base=0x7FFC47160000 | size=49156096 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\nvngx_dlss.dll
+- nvngx_dlssg.dll | base=0x7FFC5B4A0000 | size=7708672 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\nvngx_dlssg.dll
+- nvobjectloader64.dll | base=0x7FFD61400000 | size=15052800 | C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_da865124972e1f80\nvobjectloader64.dll
+- nvppex.dll | base=0x7FFD8DFC0000 | size=7499776 | C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_da865124972e1f80\nvppex.dll
+- nvspcap64.dll | base=0x7FFD8FF00000 | size=1495040 | C:\WINDOWS\system32\nvspcap64.dll
+- NvTelemetryAPI64.dll | base=0x7FFDAC3A0000 | size=4894720 | C:\Program Files\NVIDIA Corporation\NvTelemetry\NvTelemetryAPI64.dll
+- NvTelemetryBridge64.dll | base=0x7FFDACF50000 | size=438272 | C:\Program Files\NVIDIA Corporation\NvTelemetry\NvTelemetryBridge64.dll
+- nvwgf2umx.dll | base=0x7FFDB9930000 | size=90284032 | C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_da865124972e1f80\nvwgf2umx.dll
+- ole32.dll | base=0x7FFDD4920000 | size=1679360 | C:\WINDOWS\System32\ole32.dll
+- OLEAUT32.dll | base=0x7FFDD51C0000 | size=888832 | C:\WINDOWS\System32\OLEAUT32.dll
+- OPENGL32.dll | base=0x7FFDA55E0000 | size=1097728 | C:\WINDOWS\SYSTEM32\OPENGL32.dll
+- powrprof.dll | base=0x7FFDD3AA0000 | size=385024 | C:\WINDOWS\SYSTEM32\powrprof.dll
+- profapi.dll | base=0x7FFDD3D20000 | size=167936 | C:\WINDOWS\SYSTEM32\profapi.dll
+- PSAPI.DLL | base=0x7FFDD4B80000 | size=32768 | C:\WINDOWS\System32\PSAPI.DLL
+- rasadhlp.dll | base=0x7FFDB9190000 | size=45056 | C:\Windows\System32\rasadhlp.dll
+- rCommon_x64_rwdi.dll | base=0x7FFDCAEF0000 | size=61440 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\rCommon_x64_rwdi.dll
+- rd3d12_x64_rwdi.dll | base=0x7FFC61F80000 | size=983040 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\rd3d12_x64_rwdi.dll
+- renderer_x64_rwdi.dll | base=0x7FFC62340000 | size=3432448 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\renderer_x64_rwdi.dll
+- ResampleDmo.DLL | base=0x7FFD1B580000 | size=749568 | C:\WINDOWS\SYSTEM32\ResampleDmo.DLL
+- ResourceCore_x64_rwdi.dll | base=0x7FFC62210000 | size=1245184 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\ResourceCore_x64_rwdi.dll
+- ResourceManagement_x64_rwdi.dll | base=0x7FFD93040000 | size=286720 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\ResourceManagement_x64_rwdi.dll
+- resourcepolicyclient.dll | base=0x7FFDD14F0000 | size=81920 | C:\WINDOWS\SYSTEM32\resourcepolicyclient.dll
+- RPCRT4.dll | base=0x7FFDD4E70000 | size=1146880 | C:\WINDOWS\System32\RPCRT4.dll
+- rsaenh.dll | base=0x7FFDD29F0000 | size=233472 | C:\WINDOWS\system32\rsaenh.dll
+- runtime_dx11.dll | base=0x7FFC46430000 | size=13811712 | c:\program files (x86)\steam\steamapps\common\dying light the beast\ph_ft\work\bin\x64\runtime_dx11.dll
+- schannel.DLL | base=0x7FFDD28C0000 | size=811008 | C:\WINDOWS\system32\schannel.DLL
+- sechost.dll | base=0x7FFDD52A0000 | size=692224 | C:\WINDOWS\System32\sechost.dll
+- Secur32.dll | base=0x7FFDD0C50000 | size=53248 | C:\WINDOWS\SYSTEM32\Secur32.dll
+- sentry-native.dll | base=0x7FFD5C800000 | size=331776 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\sentry-native.dll
+- SETUPAPI.dll | base=0x7FFDD58E0000 | size=4747264 | C:\WINDOWS\System32\SETUPAPI.dll
+- SHCORE.dll | base=0x7FFDD6310000 | size=1028096 | C:\WINDOWS\System32\SHCORE.dll
+- SHELL32.dll | base=0x7FFDD6410000 | size=7962624 | C:\WINDOWS\System32\SHELL32.dll
+- SHLWAPI.dll | base=0x7FFDD5530000 | size=417792 | C:\WINDOWS\System32\SHLWAPI.dll
+- sl.common.dll | base=0x7FFD3AFA0000 | size=757760 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\sl.common.dll
+- sl.dlss.dll | base=0x7FFD45DD0000 | size=237568 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\sl.dlss.dll
+- sl.dlss_g.dll | base=0x7FFCA6F30000 | size=454656 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\sl.dlss_g.dll
+- sl.interposer.dll | base=0x7FFD3B810000 | size=557056 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\sl.interposer.dll
+- sl.nis.dll | base=0x7FFC609D0000 | size=966656 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\sl.nis.dll
+- sl.pcl.dll | base=0x7FFD45790000 | size=180224 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\sl.pcl.dll
+- sl.reflex.dll | base=0x7FFD3B630000 | size=200704 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\sl.reflex.dll
+- SourceControl_x64_rwdi.dll | base=0x7FFC62070000 | size=1675264 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\SourceControl_x64_rwdi.dll
+- SSPICLI.DLL | base=0x7FFDD2D50000 | size=299008 | C:\WINDOWS\SYSTEM32\SSPICLI.DLL
+- steam_api64.dll | base=0x7FFD5B0B0000 | size=315392 | c:\program files (x86)\steam\steamapps\common\dying light the beast\engine\source\bin\x64\steam_api64.dll
+- steamclient64.dll | base=0x7FFCE3510000 | size=26726400 | C:\Program Files (x86)\Steam\steamclient64.dll
+- stove.engine.Graphs_x64_rwdi.dll | base=0x7FFD5CCC0000 | size=401408 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\stove.engine.Graphs_x64_rwdi.dll
+- sxs.dll | base=0x1EED1430000 | size=663552 | C:\WINDOWS\SYSTEM32\sxs.dll
+- textinputframework.dll | base=0x7FFDA6890000 | size=1318912 | C:\WINDOWS\SYSTEM32\textinputframework.dll
+- tier0_s64.dll | base=0x7FFD063C0000 | size=3203072 | C:\Program Files (x86)\Steam\tier0_s64.dll
+- TrSpeedHack_x64.dll | base=0x7FFD47620000 | size=167936 | %USERPROFILE%\AppData\Local\FLiNGTrainer\TrSpeedHack_x64.dll
+- ucrtbase.dll | base=0x7FFDD4210000 | size=1359872 | C:\WINDOWS\System32\ucrtbase.dll
+- uiautomationcore.dll | base=0x7FFD948D0000 | size=4325376 | C:\WINDOWS\SYSTEM32\uiautomationcore.dll
+- UMPDC.dll | base=0x7FFDD3A80000 | size=86016 | C:\WINDOWS\SYSTEM32\UMPDC.dll
+- USER32.dll | base=0x7FFDD55A0000 | size=1896448 | C:\WINDOWS\System32\USER32.dll
+- USERENV.dll | base=0x7FFDD30E0000 | size=212992 | C:\WINDOWS\SYSTEM32\USERENV.dll
+- uxtheme.dll | base=0x7FFDD0EA0000 | size=688128 | C:\WINDOWS\system32\uxtheme.dll
+- VCRUNTIME140.dll | base=0x7FFDB5780000 | size=180224 | C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll
+- VCRUNTIME140_1.dll | base=0x7FFDB57B0000 | size=49152 | C:\WINDOWS\SYSTEM32\VCRUNTIME140_1.dll
+- VERSION.dll | base=0x7FFDCBEB0000 | size=45056 | C:\WINDOWS\SYSTEM32\VERSION.dll
+- vstdlib_s64.dll | base=0x7FFD19EC0000 | size=798720 | C:\Program Files (x86)\Steam\vstdlib_s64.dll
+- wbemcomn.dll | base=0x7FFDB6870000 | size=499712 | C:\WINDOWS\SYSTEM32\wbemcomn.dll
+- wbemprox.dll | base=0x7FFDB68F0000 | size=73728 | C:\WINDOWS\system32\wbem\wbemprox.dll
+- wbemsvc.dll | base=0x7FFDB54C0000 | size=86016 | C:\WINDOWS\system32\wbem\wbemsvc.dll
+- wdmaud.drv | base=0x7FFD761C0000 | size=311296 | C:\WINDOWS\SYSTEM32\wdmaud.drv
+- wdmaud2.drv | base=0x7FFD97B90000 | size=155648 | C:\WINDOWS\SYSTEM32\wdmaud2.drv
+- webio.dll | base=0x7FFD9D460000 | size=876544 | C:\WINDOWS\SYSTEM32\webio.dll
+- win32u.dll | base=0x7FFDD4550000 | size=159744 | C:\WINDOWS\System32\win32u.dll
+- windows.storage.dll | base=0x1EECD420000 | size=9101312 | C:\WINDOWS\SYSTEM32\windows.storage.dll
+- Windows.UI.dll | base=0x7FFDA7440000 | size=1421312 | C:\Windows\System32\Windows.UI.dll
+- WindowsCodecs.dll | base=0x7FFDCF470000 | size=2326528 | C:\WINDOWS\SYSTEM32\WindowsCodecs.dll
+- WINHTTP.dll | base=0x7FFDCD240000 | size=1220608 | C:\WINDOWS\SYSTEM32\WINHTTP.dll
+- WININET.dll | base=0x7FFDB4B50000 | size=2699264 | C:\WINDOWS\SYSTEM32\WININET.dll
+- WINMM.dll | base=0x7FFDC0D40000 | size=221184 | C:\WINDOWS\SYSTEM32\WINMM.dll
+- winmmbase.dll | base=0x7FFD927B0000 | size=225280 | C:\WINDOWS\SYSTEM32\winmmbase.dll
+- WINNSI.DLL | base=0x7FFDD0E50000 | size=57344 | C:\WINDOWS\SYSTEM32\WINNSI.DLL
+- winrnr.dll | base=0x7FFD98900000 | size=77824 | C:\WINDOWS\System32\winrnr.dll
+- WINTRUST.dll | base=0x7FFDD47D0000 | size=532480 | C:\WINDOWS\System32\WINTRUST.dll
+- wldp.dll | base=0x7FFDD3350000 | size=434176 | C:\WINDOWS\SYSTEM32\wldp.dll
+- workshop_x64_rwdi.dll | base=0x7FFD67A30000 | size=217088 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\workshop_x64_rwdi.dll
+- WS2_32.dll | base=0x7FFDD5D70000 | size=524288 | C:\WINDOWS\System32\WS2_32.dll
+- wshbth.dll | base=0x7FFDCB790000 | size=90112 | C:\WINDOWS\system32\wshbth.dll
+- XAudio2_7.DLL | base=0x7FFD43620000 | size=569344 | C:\WINDOWS\SYSTEM32\XAudio2_7.DLL
+- xaudio2_9.dll | base=0x7FFCAADE0000 | size=606208 | C:\WINDOWS\SYSTEM32\xaudio2_9.dll
+- xaudio2_9redist.dll | base=0x7FFC61820000 | size=864256 | C:\Program Files (x86)\Steam\steamapps\common\Dying Light The Beast\ph_ft\work\bin\x64\xaudio2_9redist.dll
+- XINPUT1_3.dll | base=0x7FFD5C860000 | size=196608 | C:\WINDOWS\SYSTEM32\XINPUT1_3.dll
+- xinput1_4.dll | base=0x7FFCF8C00000 | size=110592 | C:\WINDOWS\SYSTEM32\xinput1_4.dll
+- XINPUT9_1_0.dll | base=0x7FFDB83B0000 | size=36864 | C:\WINDOWS\SYSTEM32\XINPUT9_1_0.dll
